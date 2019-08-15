@@ -3,7 +3,7 @@ import { promisify } from 'util'
 import { stat } from 'fs'
 import tmp from 'tmp'
 
-export const createFileRequest = async (hash: string): string => {
+export const createRequestFile = async (hash: string): string => {
   try {
     const createTmpFileAsync = promisify(tmp.file)
     const statAsync = promisify(stat)

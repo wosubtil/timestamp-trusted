@@ -1,21 +1,21 @@
-import { createFileRequest } from '../src/trusted-timestamps'
+import { createRequestFile } from '../src/trusted-timestamps'
 import crypto from 'crypto'
 import { stat } from 'fs'
 
-describe('createFileRequest', () => {
+describe('createRequestFile', () => {
   test('Smoke tests', () => {
-    expect(typeof createFileRequest).toEqual('function')
+    expect(typeof createRequestFile).toEqual('function')
   })
 
   test('Passing hash invalid', async () => {
     const hashFake = 'da39a3ee5e6b4b0d3255bfef95601890afd8070'
-    await expect(createFileRequest(hashFake)).rejects.toThrow(Error)
+    await expect(createRequestFile(hashFake)).rejects.toThrow(Error)
   })
 
   test('Should be return a path request files', async () => {
     const rawContent = 'Hello'
     const hashContent = crypto.createHash('sha256').update(rawContent).digest('hex')
-    const pathFileRequest = await createFileRequest(hashContent)
+    const pathFileRequest = await createRequestFile(hashContent)
     expect(typeof pathFileRequest).toEqual('string')
     stat(pathFileRequest, (error, stats) => {
       if (error) throw error
