@@ -8,6 +8,10 @@
     "test": "jest --watch",
     "build": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wosubtil/timestamp-trusted.git"
+  },
   "keywords": ["rfc3161", "timestamp", "trusted", "tsa", "timestamp authority"],
   "author": "Welinton Subtil <welinton.ti@gmail.com>",
   "license": "MIT",
