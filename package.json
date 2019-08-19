@@ -1,17 +1,16 @@
 {
-  "name": "timestamp-bry-new",
+  "name": "timestamp-trusted",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "test": "jest --watch",
-    "build": "tsc",
-    "start:prod": "node dist/index.js"
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "Welinton Subtil <welinton@realizati.com.br>",
-  "license": "ISC",
+  "keywords": ["rfc3161", "timestamp", "trusted", "tsa", "timestamp authority"],
+  "author": "Welinton Subtil <welinton.ti@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.17",
     "@types/node": "^12.7.2",
