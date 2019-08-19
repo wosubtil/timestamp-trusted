@@ -26,7 +26,7 @@ export const execAsync = async (command: string): Promise<string> => {
   })
 }
 
-export const getFileStats = async (pathFile: string): Promise<string> => {
+export const getFileStats = async (pathFile: string): Promise<Stats> => {
   try {
     const statAsync = promisify(stat)
     const fileStats = await statAsync(pathFile)
@@ -34,4 +34,25 @@ export const getFileStats = async (pathFile: string): Promise<string> => {
   } catch (error) {
     throw new CustomError('There was an error fetching file stats')
   }
+}
+
+interface Stats {
+  dev: number;
+  mode: number;
+  nlink: number;
+  uid: number;
+  gid: number;
+  rdev: number;
+  blksize: number;
+  ino: number;
+  size: number;
+  blocks: number;
+  atimeMs: number;
+  mtimeMs: number;
+  ctimeMs: number;
+  birthtimeMs: number;
+  atime: Date;
+  mtime: Date;
+  ctime: Date;
+  birthtime: Date;
 }
