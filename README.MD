@@ -1,4 +1,4 @@
-# Trusted Timestap Implementation (RFC3161)
+# Trusted Timestamp Implementation (RFC3161)
 
 This lib/package was based entirely on the [https://d-mueller.de/blog/dealing-with-trusted-timestamps-in-php-rfc-3161/](https://d-mueller.de/blog/dealing-with-trusted-timestamps-in-php-rfc-3161/) implementation originally made in php.
 
